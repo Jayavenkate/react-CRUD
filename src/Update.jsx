@@ -26,8 +26,8 @@ useEffect(()=>{
       firstname: firstname,
       lastname: lastname,
     }
-    // console.log(newData);
-    fetch("https://6419fb10c152063412d0b3cc.mockapi.io/crud",{
+    console.log(newData);
+    fetch(`https://6419fb10c152063412d0b3cc.mockapi.io/crud/${data.id}`,{
       method:"PUT",
       body:JSON.stringify(newData),
       headers:{"Content-Type": "application/json",},
@@ -39,14 +39,14 @@ useEffect(()=>{
     <div className="form">
       <TextField
         onChange={(event) => setFirstName(event.target.value)}
-        value={data.firstname}
+        value={firstname}
         label="FirstName"
         variant="outlined"
       />
       <br />
       <TextField
         onChange={(event) => setLastName(event.target.value)}
-        value={data.lastname}
+        value={lastname}
         
         label="LastName"
         variant="outlined"

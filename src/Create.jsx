@@ -13,7 +13,7 @@ export function Create() {
       firstname: firstname,
       lastname: lastname,
     }
-    console.log(newData);
+    // console.log(newData);
     fetch("https://6419fb10c152063412d0b3cc.mockapi.io/crud",{
       method:"POST",
       body:JSON.stringify(newData),
