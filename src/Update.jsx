@@ -17,12 +17,14 @@ useEffect(()=>{
     
 }
  function UpdateForm({data}) {
+  
   const [firstname, setFirstName] = useState(data.firstname);
   const [lastname, setLastName] = useState(data.lastname);
   const navigate = useNavigate();
 
    const updatedata = ()=>{
     const newData= {
+     
       firstname: firstname,
       lastname: lastname,
     }
@@ -37,6 +39,7 @@ useEffect(()=>{
   }
   return (
     <div className="form">
+       
       <TextField
         onChange={(event) => setFirstName(event.target.value)}
         value={firstname}
