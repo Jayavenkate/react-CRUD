@@ -18,22 +18,34 @@ export default function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             CRUD Operation
           </Typography>
+          <Button onClick={() => navigate("/home")} color="inherit">Home</Button>
+
           <Button onClick={() => navigate("/create")} color="inherit">Create</Button>
 
           <Button onClick={() => navigate("/read")} color="inherit">Read</Button>
-          {/* <Button onClick={() => navigate("/update")} color="inherit">Update</Button> */}
 
         </Toolbar>
       </AppBar>
+      
       <div className="main-con">
-        
-          <Routes>
+        <Routes>
             <Route path="/create" element={<Create />} />
+            <Route path="/home" element={ <Home />} />
+
             <Route path="/read" element={<Read />} />
             <Route path="/create/update/:id" element={<Update />} />
+           
           </Routes>
         
       </div>
     </div>
   );
 }
+ function Home(){
+  return(
+    <div>
+        <h2 className="welcome">Welcome to my APP 😍</h2>
+
+    </div>
+  )
+ }
