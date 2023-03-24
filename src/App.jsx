@@ -21,7 +21,7 @@ export default function App() {
           <Button onClick={() => navigate("/create")} color="inherit">Create</Button>
 
           <Button onClick={() => navigate("/read")} color="inherit">Read</Button>
-          <Button onClick={() => navigate("/update")} color="inherit">Update</Button>
+          {/* <Button onClick={() => navigate("/update")} color="inherit">Update</Button> */}
 
         </Toolbar>
       </AppBar>
@@ -30,7 +30,7 @@ export default function App() {
           <Routes>
             <Route path="/create" element={<Create />} />
             <Route path="/read" element={<Read />} />
-            <Route path="/create/update:id" element={<Update />} />
+            <Route path="/update:id" element={<Update />} />
           </Routes>
         
       </div>

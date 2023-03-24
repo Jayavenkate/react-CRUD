@@ -21,7 +21,7 @@ useEffect(()=>{
   const [lastname, setLastName] = useState(data.lastname);
   const navigate = useNavigate();
 
-   const updatedata= ()=>{
+   const updatedata = ()=>{
     const newData= {
       firstname: firstname,
       lastname: lastname,

@@ -46,7 +46,7 @@ export function Read() {
             <TableCell>{data.firstname}</TableCell>
             <TableCell>{data.lastname}</TableCell>
             <TableCell><Button onClick={()=>deletedata(data.id)}>Delete</Button></TableCell>
-            <TableCell><Button onClick={()=>navigate(`/create/update/${data.id}`)}>Update</Button></TableCell>
+            <TableCell><Button onClick={()=>navigate(`/update/${data.id}`)}>Update</Button></TableCell>
             </TableRow>
           ))}
         
