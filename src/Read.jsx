@@ -45,8 +45,8 @@ export function Read() {
           </TableRow>
         </TableHead>
         <TableBody >
-          {data.map((data)=>(
-            <TableRow key={data.firstname}>
+          {data.map((data,index)=>(
+            <TableRow key={index}>
             <TableCell>{data.firstname}</TableCell>
             <TableCell>{data.lastname}</TableCell>
             <TableCell><Button onClick={()=>deletedata(data.id)}>Delete</Button></TableCell>
